@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAK SHOP - Panel del Vendedor</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        header {
+            background-color: #ff4d4d;
+            color: white;
+            padding: 15px 20px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        header h1 {
+            font-size: 1.8rem;
+            margin-bottom: 5px;
+        }
+
+        header p {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        .vendor-actions {
+            display: flex;
+            justify-content: center;
+            margin: 20px;
+        }
+
+        .add-button {
+            background-color: #28a745;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+
+        .add-button:hover {
+            background-color: #218838;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        .product-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 20px;
+        }
+
+        .product {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+
+        .product img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .product-info {
+            padding: 15px;
+            flex: 1;
+        }
+
+        .product-info h3 {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            color: #ff4d4d;
+        }
+
+        .product-info p {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        .price {
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .action-buttons {
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 15px;
+            border-top: 1px solid #eee;
+            background-color: #fafafa;
+        }
+
+        .btn {
+            padding: 6px 12px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 600;
+            transition: 0.3s ease;
+        }
+
+        .btn-edit {
+            background-color: #007bff;
+            color: white;
+        }
+        .btn-edit:hover {
+            background-color: #0056b3;
+        }
+
+        .btn-delete {
+            background-color: #dc3545;
+            color: white;
+        }
+        .btn-delete:hover {
+            background-color: #a71d2a;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>JAK SHOP</h1>
+        <p>Panel del Vendedor - Gestiona tus productos</p>
+    </header>
+
+    <div class="vendor-actions">
+        <a href="agregar_producto.html" class="add-button">+ Agregar Nuevo Producto</a>
+    </div>
+
+    <main>
+        <div class="product-container">
+            <div class="product">
+                <img src="https://acdn.mitiendanube.com/stores/093/864/products/7707278179874_eb-700-sc-31-86b302a0a75b6ab2c616877950582992-1024-1024.jpg" alt="Audífonos Inalámbricos">
+                <div class="product-info">
+                    <h3>Audífonos Inalámbricos</h3>
+                    <p>Bluetooth X100, sonido excepcional y comodidad todo el día.</p>
+                    <div class="price">$89,900 COP*</div>
+                </div>
+                <div class="action-buttons">
+                    <a href="editar_producto.html" class="btn btn-edit">Editar</a>
+                    <a href="#" class="btn btn-delete">Eliminar</a>
+                </div>
+            </div>
+
+            <div class="product">
+                <img src="https://i.pinimg.com/564x/09/d4/7c/09d47c5bae4b0706069eb1e1876f3ab5.jpg" alt="Set de Maquillaje">
+                <div class="product-info">
+                    <h3>Set de Maquillaje</h3>
+                    <p>Kit esencial para un look deslumbrante.</p>
+                    <div class="price">$60,000 COP*</div>
+                </div>
+                <div class="action-buttons">
+                    <a href="editar_producto.html" class="btn btn-edit">Editar</a>
+                    <a href="#" class="btn btn-delete">Eliminar</a>
+                </div>
+            </div>
+
+            <div class="product">
+                <img src="https://images.cdn1.buscalibre.com/fit-in/360x360/a1/48/a14842ead3bad9a3fd699bf18cce84bc.jpg" alt="Set libros de Harry Potter">
+                <div class="product-info">
+                    <h3>Set libros de Harry Potter</h3>
+                    <p>Colección completa de la saga de J.K. Rowling.</p>
+                    <div class="price">$244,300 COP*</div>
+                </div>
+                <div class="action-buttons">
+                    <a href="editar_producto.html" class="btn btn-edit">Editar</a>
+                    <a href="#" class="btn btn-delete">Eliminar</a>
+                </div>
+            </div>
+
+            <div class="product">
+                <img src="https://www.productoscapilares.cl/admin/fotos/44584ab33daf1bf.jpg" alt="Set Skala">
+                <div class="product-info">
+                    <h3>Set Skala</h3>
+                    <p>Productos naturales para cuidado capilar.</p>
+                    <div class="price">$100,000 COP*</div>
+                </div>
+                <div class="action-buttons">
+                    <a href="editar_producto.html" class="btn btn-edit">Editar</a>
+                    <a href="#" class="btn btn-delete">Eliminar</a>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
