@@ -31,7 +31,10 @@ $stmt = $conn->prepare($sql);
 $stmt->bind_param("ssss", $nombre, $email, $contraseña, $tipo);
 
 if ($stmt->execute()) {
-    header("Location: Productos.html"); // Redirige al login
+    echo "<html><head><title>Registro exitoso</title><style>body{font-family:Arial,sans-serif;background:#0f2027;color:#fff;text-align:center;padding-top:50px;}h2{color:#FFD700;}a,button{background:#FFD700;color:#333;padding:10px 20px;border:none;border-radius:8px;font-weight:bold;cursor:pointer;text-decoration:none;margin-top:20px;}</style></head><body>";
+    echo "<h2>✅ Usuario registrado exitosamente</h2>";
+    echo "<form action='login.html' method='get'><button type='submit'>Ir al login</button></form>";
+    echo "</body></html>";
     exit();
 } else {
     echo "<html><head><title>Error de registro</title><style>body{font-family:Arial,sans-serif;background:#f9f9f9;color:#333;text-align:center;padding-top:50px;}h2{color:#ff4d4d;}a{color:#007bff;text-decoration:none;font-weight:600;}</style></head><body>";

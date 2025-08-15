@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión - JAK SHOP</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: white;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            width: 350px;
+            backdrop-filter: blur(10px);
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #FFD700;
+        }
+        input, button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 8px;
+            border: none;
+            border-radius: 8px;
+            outline: none;
+        }
+        input {
+            background: rgba(255, 255, 255, 0.9);
+            color: black;
+        }
+        button {
+            background: #FFD700;
+            color: black;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        button:hover {
+            background: #ffbf00;
+            transform: scale(1.05);
+        }
+        .toggle {
+            display: flex;
+            justify-content: center;
+            margin-top: 15px;
+        }
+        .toggle a {
+            color: #FFD700;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        .toggle a:hover {
+            text-decoration: underline;
+        }
+        .error {
+            color: #ff4d4d;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Iniciar Sesión</h2>
+        <form action="login.php" method="POST">
+            <label>Correo electrónico</label>
+            <input type="email" name="email" required>
+            <label>Contraseña</label>
+            <input type="password" name="contraseña" required>
+            <button type="submit">Ingresar</button>
+        </form>
+        <div class="toggle">
+            <a href="Registro.html">¿No tienes cuenta? Regístrate</a>
+        </div>
+    </div>
+</body>
+</html>
